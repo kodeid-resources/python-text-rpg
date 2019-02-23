@@ -7,6 +7,9 @@ class Player(Character):
     def __init__(self, state='normal', *args):
         super().__init__(self, *args)
         self.state = state
+    def __str__(self):
+        return "{}'s health: {}/{}".format(self.name, self.health, self.health_max)
+
 
     def quit(self):
         print("{} can't find the way back home, and dies of starvation.\nR.I.P.".format(self.name))
@@ -14,7 +17,7 @@ class Player(Character):
     def help(self):
         print(Commands.keys())
     def status(self):
-        print("{}'s health: {}/{}".format(self.name, self.health, self.health_max))
+        print(self)
     def tired(self):
         print("{} feels tired. Need a rest.".format(self.name))
         self.health = max(1, self.health - 1)

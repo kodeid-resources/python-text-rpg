@@ -8,7 +8,6 @@ def main():
     print("{} enter a dark cave, searching for an adventure.".format(p.name))
 
     while(p.health > 0):
-        print(p.health)
         line = input(">> ")
         args = line.split()
         if len(args) > 0:
