@@ -29,7 +29,7 @@ class Player(Character):
             print("{} rests.".format(self.name))
             if randint(0, 1):
                 self.enemy = Enemy(self)
-                print("{} is rudely awakened by %s!".format(self.name, self.enemy.name))
+                print("{} is rudely awakened by {}!".format(self.name, self.enemy.name))
                 self.state = 'fight'
                 self.enemy_attacks()
             else:
